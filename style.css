@@ -662,7 +662,11 @@ footer a:hover { color: var(--accent); }
 }
 
 @media (max-width: 800px) {
-  .site-shell { display: block; }
+  .site-shell {
+    position: relative;
+    display: block;
+    padding-bottom: 80px;
+  }
   .sidebar {
     position: static;
     height: auto;
@@ -682,13 +686,23 @@ footer a:hover { color: var(--accent); }
     margin-top: 14px;
   }
   .site-shell > main { padding: 8px 24px 28px; }
-  .sidebar-footer { margin-top: 26px; }
+  .sidebar-footer {
+    position: absolute;
+    right: 24px;
+    bottom: 12px;
+    left: 24px;
+    margin: 0;
+  }
 }
 
 @media (max-width: 600px) {
   .homepage-gallery { grid-template-columns: 1fr; }
   .site-shell > main { padding: 4px 16px 24px; }
   .sidebar { padding: 20px 16px 16px; }
+  .sidebar-footer {
+    right: 16px;
+    left: 16px;
+  }
 }
 
 /* ===== PROJECT DETAIL PAGES ===== */
